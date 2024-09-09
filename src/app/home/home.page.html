@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="a">
+    <ion-title>
+      Product
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="d">
+  <ion-grid>
+    <ion-col size="12" size-md="6" size-lg="6" *ngFor="let i of items">
+      <ion-card color="c" (click)="Gotodetail(i)">
+        <img [src]="i.imgURL" t="">
+        <ion-card-header>
+          <ion-card-title>{{ i.Name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ i.Price }} ฿
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-grid>
+</ion-content>

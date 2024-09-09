@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="a">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="d">
+  <ion-grid>
+    <ion-col size="12" size-md="6" size-lg="6">
+      <ion-card color="c" *ngIf="pro">
+        <img [src]="pro.imgURL" t="">
+        <ion-card-header>
+          <ion-card-title>{{pro.Name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>    
+          <ion-item color="c">
+            {{pro.Price}}
+          </ion-item>
+          <ion-item color="c">
+            {{pro.Detail}}
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-grid>
+</ion-content>
